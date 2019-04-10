@@ -77,8 +77,8 @@
             // 
             // loginBut
             // 
-            this.loginBut.BackColor = System.Drawing.Color.Lime;
-            this.loginBut.Location = new System.Drawing.Point(304, 257);
+            this.loginBut.BackColor = System.Drawing.Color.LimeGreen;
+            this.loginBut.Location = new System.Drawing.Point(305, 250);
             this.loginBut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginBut.Name = "loginBut";
             this.loginBut.Size = new System.Drawing.Size(104, 25);
@@ -89,7 +89,7 @@
             // 
             // cancelBut
             // 
-            this.cancelBut.Location = new System.Drawing.Point(184, 257);
+            this.cancelBut.Location = new System.Drawing.Point(184, 250);
             this.cancelBut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cancelBut.Name = "cancelBut";
             this.cancelBut.Size = new System.Drawing.Size(104, 25);
@@ -103,7 +103,7 @@
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Sitka Text", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.Color.Red;
-            this.title.Location = new System.Drawing.Point(93, 19);
+            this.title.Location = new System.Drawing.Point(112, 8);
             this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(370, 69);

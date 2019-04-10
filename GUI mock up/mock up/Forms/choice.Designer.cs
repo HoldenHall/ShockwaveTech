@@ -55,7 +55,7 @@
             this.userBut.Name = "userBut";
             this.userBut.Size = new System.Drawing.Size(258, 70);
             this.userBut.TabIndex = 1;
-            this.userBut.Text = "User";
+            this.userBut.Text = "Customer";
             this.userBut.UseVisualStyleBackColor = false;
             this.userBut.Click += new System.EventHandler(this.userBut_Click);
             // 

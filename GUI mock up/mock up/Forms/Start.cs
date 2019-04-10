@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/// <summary>
+/// what users first see when starting program
+/// </summary>
 namespace mock_up
 {
     public partial class Start : Form
@@ -29,6 +31,11 @@ namespace mock_up
             NewChoice choice = new NewChoice();
             choice.Show();
             this.Hide();
+        }
+
+        private void Start_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

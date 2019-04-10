@@ -40,7 +40,7 @@
             this.newBut.Location = new System.Drawing.Point(169, 200);
             this.newBut.Margin = new System.Windows.Forms.Padding(2);
             this.newBut.Name = "newBut";
-            this.newBut.Size = new System.Drawing.Size(258, 70);
+            this.newBut.Size = new System.Drawing.Size(258, 57);
             this.newBut.TabIndex = 3;
             this.newBut.Text = "New";
             this.newBut.UseVisualStyleBackColor = false;
@@ -48,13 +48,12 @@
             // 
             // loginBut
             // 
-            this.loginBut.BackColor = System.Drawing.Color.LimeGreen;
+            this.loginBut.BackColor = System.Drawing.Color.SpringGreen;
             this.loginBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBut.ForeColor = System.Drawing.SystemColors.ControlText;
             this.loginBut.Location = new System.Drawing.Point(169, 114);
             this.loginBut.Margin = new System.Windows.Forms.Padding(2);
             this.loginBut.Name = "loginBut";
-            this.loginBut.Size = new System.Drawing.Size(258, 70);
+            this.loginBut.Size = new System.Drawing.Size(258, 58);
             this.loginBut.TabIndex = 2;
             this.loginBut.Text = "Login";
             this.loginBut.UseVisualStyleBackColor = false;
@@ -85,6 +84,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Start";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Start_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

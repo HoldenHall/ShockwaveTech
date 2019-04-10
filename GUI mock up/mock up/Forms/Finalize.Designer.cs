@@ -34,7 +34,7 @@
             // 
             // QueueBut
             // 
-            this.QueueBut.BackColor = System.Drawing.Color.SpringGreen;
+            this.QueueBut.BackColor = System.Drawing.Color.Lime;
             this.QueueBut.Location = new System.Drawing.Point(64, 63);
             this.QueueBut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.QueueBut.Name = "QueueBut";

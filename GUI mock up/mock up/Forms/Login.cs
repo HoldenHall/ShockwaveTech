@@ -10,10 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// login for all users that checks account info and password sent
+/// </summary>
 namespace mock_up
 {
     public partial class Login : Form
     {
+        Aes_Encryption aes = new Aes_Encryption();
         //used to see what button they pressed on the choice form
         char type;
         Business business;
@@ -46,7 +50,7 @@ namespace mock_up
             else
                 MessageBox.Show("Username/Password may be wrong please try again.");
         }
-        
+
         //connects to the database and sees if our username has a password and if it matches
         private bool loginCheck()
         {
@@ -56,7 +60,7 @@ namespace mock_up
             //determines what login is being attempted
             if (type == 'B')
             {
-                business = new Business(user);
+                business = new Business(user,passText.Text);
                 //checking password
                 if (business.PassCheck(passText.Text))
                 {
@@ -67,7 +71,7 @@ namespace mock_up
             }
             else
             {
-                customer = new Customer(user);
+                customer = new Customer(user,passText.Text);
                 if (customer.PassCheck(passText.Text))
                 {
                     return true;
