@@ -1,6 +1,6 @@
 ﻿namespace mock_up
 {
-    partial class choice
+    partial class NewChoice
     {
         /// <summary>
         /// Required designer variable.
@@ -72,7 +72,7 @@
             this.label2.Text = "Quicker Queue";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // choice
+            // NewChoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -82,7 +82,7 @@
             this.Controls.Add(this.userBut);
             this.Controls.Add(this.busBut);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "choice";
+            this.Name = "NewChoice";
             this.Text = "ShockWave Inc.";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -16,22 +16,24 @@ namespace mock_up
     {
         //used to see what button they pressed on the choice form
         char type;
-
+        Business business;
+        Customer customer;
         public Login(char t)
         {
             type = t;
             InitializeComponent();
         }
 
+        //once login is pressed begins logincheck and determines what kind of account
+        //is being logged into
         private void loginBut_Click(object sender, EventArgs e)
         {
-            bool pass = loginCheck();
             //checks if it logged in
-            if (pass)
+            if (loginCheck())
                 //wether its a business or customer
                 if (type == 'B')
                 {
-                    BusHome bus = new BusHome(usernameText.Text);
+                    BusHome bus = new BusHome(business);
                     bus.Show();
                     this.Close();
                 }
@@ -50,60 +52,37 @@ namespace mock_up
         {
             //holds the username passed in
             string user = usernameText.Text;
-            //creates a connection to our database
-            SqlConnection con = new SqlConnection("Data Source=shockwave.database.windows.net;Initial Catalog=Quicker Queue;;User ID=user;Password=Mwsu1234");
-            //creates a command that will hold our query
-            SqlCommand cmd = con.CreateCommand();
 
+            //determines what login is being attempted
             if (type == 'B')
             {
-                //holds passed in password from database
-                string dataPass = string.Empty;
-                //query we send in
-                cmd.CommandText = "SELECT pass FROM Business WHERE username=@username";
-                //replaces @username in our query with specified username
-                cmd.Parameters.AddWithValue("@username", user);
-                con.Open();
-                //get info 
-                var r = cmd.ExecuteReader();
-                //checks if the username had anything in the database
-                if (r.Read())
+                business = new Business(user);
+                //checking password
+                if (business.PassCheck(passText.Text))
                 {
-                    //compare the typed in password with our database
-                    string pass = passText.Text;
-                    string d = r["pass"].ToString();
-                    //password has weird empty spaces so this gets rid of those
-                    dataPass= d.Replace(" ", "");
-                    if (dataPass == pass)
-                        return true;
-                    else
-                        return false;
+                    return true;
                 }
                 else
                     return false;
             }
             else
             {
-                //all the same just for a customer not a business
-                string dataPass = string.Empty;
-
-                cmd.CommandText = "SELECT pass FROM Customer WHERE username=@username";
-                cmd.Parameters.AddWithValue("@username", user);
-                con.Open();
-                var r = cmd.ExecuteReader();
-                if (r.Read())
+                customer = new Customer(user);
+                if (customer.PassCheck(passText.Text))
                 {
-                    string pass = passText.Text;
-                    string d = r["pass"].ToString();
-                    dataPass = d.Replace(" ", "");
-                    if (dataPass == pass)
-                        return true;
-                    else
-                        return false;
+                    return true;
                 }
                 else
                     return false;
             }
+        }
+
+        //just restarts the program
+        private void cancelBut_Click(object sender, EventArgs e)
+        {
+            choice cancel = new choice();
+            cancel.Show();
+            this.Close();
         }
     }
 }
