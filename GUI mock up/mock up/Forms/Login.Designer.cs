@@ -28,32 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.usernameText = new System.Windows.Forms.RichTextBox();
-            this.passText = new System.Windows.Forms.RichTextBox();
             this.userLab = new System.Windows.Forms.Label();
             this.passLab = new System.Windows.Forms.Label();
             this.loginBut = new System.Windows.Forms.Button();
             this.cancelBut = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
+            this.usernameText = new System.Windows.Forms.TextBox();
+            this.passText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // usernameText
-            // 
-            this.usernameText.Location = new System.Drawing.Point(185, 123);
-            this.usernameText.Margin = new System.Windows.Forms.Padding(2);
-            this.usernameText.Name = "usernameText";
-            this.usernameText.Size = new System.Drawing.Size(224, 28);
-            this.usernameText.TabIndex = 1;
-            this.usernameText.Text = "";
-            // 
-            // passText
-            // 
-            this.passText.Location = new System.Drawing.Point(184, 196);
-            this.passText.Margin = new System.Windows.Forms.Padding(2);
-            this.passText.Name = "passText";
-            this.passText.Size = new System.Drawing.Size(224, 28);
-            this.passText.TabIndex = 2;
-            this.passText.Text = "";
             // 
             // userLab
             // 
@@ -79,7 +61,7 @@
             // 
             this.loginBut.BackColor = System.Drawing.Color.LimeGreen;
             this.loginBut.Location = new System.Drawing.Point(305, 250);
-            this.loginBut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loginBut.Margin = new System.Windows.Forms.Padding(2);
             this.loginBut.Name = "loginBut";
             this.loginBut.Size = new System.Drawing.Size(104, 25);
             this.loginBut.TabIndex = 5;
@@ -90,7 +72,7 @@
             // cancelBut
             // 
             this.cancelBut.Location = new System.Drawing.Point(184, 250);
-            this.cancelBut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancelBut.Margin = new System.Windows.Forms.Padding(2);
             this.cancelBut.Name = "cancelBut";
             this.cancelBut.Size = new System.Drawing.Size(104, 25);
             this.cancelBut.TabIndex = 6;
@@ -102,8 +84,8 @@
             // 
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Sitka Text", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.Color.Red;
-            this.title.Location = new System.Drawing.Point(112, 8);
+            this.title.ForeColor = System.Drawing.Color.Crimson;
+            this.title.Location = new System.Drawing.Point(85, 27);
             this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(370, 69);
@@ -111,19 +93,37 @@
             this.title.Text = "Quicker Queue";
             this.title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // usernameText
+            // 
+            this.usernameText.Location = new System.Drawing.Point(184, 125);
+            this.usernameText.Margin = new System.Windows.Forms.Padding(1);
+            this.usernameText.Name = "usernameText";
+            this.usernameText.Size = new System.Drawing.Size(224, 20);
+            this.usernameText.TabIndex = 8;
+            // 
+            // passText
+            // 
+            this.passText.Location = new System.Drawing.Point(184, 198);
+            this.passText.Margin = new System.Windows.Forms.Padding(1);
+            this.passText.Name = "passText";
+            this.passText.PasswordChar = '*';
+            this.passText.Size = new System.Drawing.Size(224, 20);
+            this.passText.TabIndex = 9;
+            this.passText.UseSystemPasswordChar = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(597, 367);
+            this.Controls.Add(this.passText);
+            this.Controls.Add(this.usernameText);
             this.Controls.Add(this.title);
             this.Controls.Add(this.cancelBut);
             this.Controls.Add(this.loginBut);
             this.Controls.Add(this.passLab);
             this.Controls.Add(this.userLab);
-            this.Controls.Add(this.passText);
-            this.Controls.Add(this.usernameText);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Login Prompt";
@@ -133,13 +133,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox usernameText;
-        private System.Windows.Forms.RichTextBox passText;
         private System.Windows.Forms.Label userLab;
         private System.Windows.Forms.Label passLab;
         private System.Windows.Forms.Button loginBut;
         private System.Windows.Forms.Button cancelBut;
         private System.Windows.Forms.Label title;
+        private System.Windows.Forms.TextBox usernameText;
+        private System.Windows.Forms.TextBox passText;
     }
 }
