@@ -42,6 +42,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.accountBut = new System.Windows.Forms.Button();
             this.logOutBut = new System.Windows.Forms.Button();
+            this.businessBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userbaseDataSet = new mock_up.UserbaseDataSet();
             this.businessBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.businessTableAdapter1 = new mock_up.UserbaseDataSetTableAdapters.BusinessTableAdapter();
@@ -55,12 +56,11 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.businessBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userbaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.businessDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // FiltercomboBox
@@ -69,10 +69,12 @@
             this.FiltercomboBox.Items.AddRange(new object[] {
             "",
             "Restraunt",
+            "Doctor\'s Office",
             "Favorites"});
-            this.FiltercomboBox.Location = new System.Drawing.Point(384, 87);
+            this.FiltercomboBox.Location = new System.Drawing.Point(396, 90);
+            this.FiltercomboBox.Margin = new System.Windows.Forms.Padding(4);
             this.FiltercomboBox.Name = "FiltercomboBox";
-            this.FiltercomboBox.Size = new System.Drawing.Size(88, 21);
+            this.FiltercomboBox.Size = new System.Drawing.Size(116, 24);
             this.FiltercomboBox.TabIndex = 0;
             this.FiltercomboBox.Text = "Filter";
             // 
@@ -80,9 +82,10 @@
             // 
             this.SearchtextBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.SearchtextBox.ForeColor = System.Drawing.Color.Black;
-            this.SearchtextBox.Location = new System.Drawing.Point(165, 87);
+            this.SearchtextBox.Location = new System.Drawing.Point(104, 90);
+            this.SearchtextBox.Margin = new System.Windows.Forms.Padding(4);
             this.SearchtextBox.Name = "SearchtextBox";
-            this.SearchtextBox.Size = new System.Drawing.Size(213, 20);
+            this.SearchtextBox.Size = new System.Drawing.Size(283, 22);
             this.SearchtextBox.TabIndex = 1;
             this.SearchtextBox.Text = "Search";
             this.SearchtextBox.Click += new System.EventHandler(this.SearchtextBox_Click);
@@ -91,10 +94,10 @@
             // 
             this.Searchbutton.BackColor = System.Drawing.Color.RoyalBlue;
             this.Searchbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Searchbutton.ForeColor = System.Drawing.SystemColors.Control;
-            this.Searchbutton.Location = new System.Drawing.Point(478, 87);
+            this.Searchbutton.Location = new System.Drawing.Point(521, 90);
+            this.Searchbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Searchbutton.Name = "Searchbutton";
-            this.Searchbutton.Size = new System.Drawing.Size(75, 23);
+            this.Searchbutton.Size = new System.Drawing.Size(100, 28);
             this.Searchbutton.TabIndex = 3;
             this.Searchbutton.Text = "Search";
             this.Searchbutton.UseVisualStyleBackColor = false;
@@ -103,17 +106,19 @@
             // OpentextBox
             // 
             this.OpentextBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.OpentextBox.Location = new System.Drawing.Point(205, 113);
+            this.OpentextBox.Location = new System.Drawing.Point(157, 122);
+            this.OpentextBox.Margin = new System.Windows.Forms.Padding(4);
             this.OpentextBox.Name = "OpentextBox";
-            this.OpentextBox.Size = new System.Drawing.Size(48, 20);
+            this.OpentextBox.Size = new System.Drawing.Size(63, 22);
             this.OpentextBox.TabIndex = 5;
             // 
             // Openlabel
             // 
             this.Openlabel.AutoSize = true;
-            this.Openlabel.Location = new System.Drawing.Point(163, 116);
+            this.Openlabel.Location = new System.Drawing.Point(101, 126);
+            this.Openlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Openlabel.Name = "Openlabel";
-            this.Openlabel.Size = new System.Drawing.Size(36, 13);
+            this.Openlabel.Size = new System.Drawing.Size(47, 17);
             this.Openlabel.TabIndex = 6;
             this.Openlabel.Text = "Open:";
             // 
@@ -124,9 +129,10 @@
             this.OpencomboBox.Items.AddRange(new object[] {
             "am",
             "pm"});
-            this.OpencomboBox.Location = new System.Drawing.Point(259, 112);
+            this.OpencomboBox.Location = new System.Drawing.Point(229, 121);
+            this.OpencomboBox.Margin = new System.Windows.Forms.Padding(4);
             this.OpencomboBox.Name = "OpencomboBox";
-            this.OpencomboBox.Size = new System.Drawing.Size(40, 21);
+            this.OpencomboBox.Size = new System.Drawing.Size(52, 24);
             this.OpencomboBox.TabIndex = 7;
             this.OpencomboBox.Text = "am";
             // 
@@ -137,35 +143,39 @@
             this.ClosecomboBox.Items.AddRange(new object[] {
             "am",
             "pm"});
-            this.ClosecomboBox.Location = new System.Drawing.Point(415, 112);
+            this.ClosecomboBox.Location = new System.Drawing.Point(437, 121);
+            this.ClosecomboBox.Margin = new System.Windows.Forms.Padding(4);
             this.ClosecomboBox.Name = "ClosecomboBox";
-            this.ClosecomboBox.Size = new System.Drawing.Size(40, 21);
+            this.ClosecomboBox.Size = new System.Drawing.Size(52, 24);
             this.ClosecomboBox.TabIndex = 10;
             this.ClosecomboBox.Text = "pm";
             // 
             // Closelabel
             // 
             this.Closelabel.AutoSize = true;
-            this.Closelabel.Location = new System.Drawing.Point(319, 116);
+            this.Closelabel.Location = new System.Drawing.Point(309, 126);
+            this.Closelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Closelabel.Name = "Closelabel";
-            this.Closelabel.Size = new System.Drawing.Size(36, 13);
+            this.Closelabel.Size = new System.Drawing.Size(47, 17);
             this.Closelabel.TabIndex = 9;
             this.Closelabel.Text = "Close:";
             // 
             // ClosetextBox
             // 
             this.ClosetextBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClosetextBox.Location = new System.Drawing.Point(361, 113);
+            this.ClosetextBox.Location = new System.Drawing.Point(365, 122);
+            this.ClosetextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ClosetextBox.Name = "ClosetextBox";
-            this.ClosetextBox.Size = new System.Drawing.Size(48, 20);
+            this.ClosetextBox.Size = new System.Drawing.Size(63, 22);
             this.ClosetextBox.TabIndex = 8;
             // 
             // Queuebut
             // 
             this.Queuebut.BackColor = System.Drawing.Color.SpringGreen;
-            this.Queuebut.Location = new System.Drawing.Point(478, 116);
+            this.Queuebut.Location = new System.Drawing.Point(521, 126);
+            this.Queuebut.Margin = new System.Windows.Forms.Padding(4);
             this.Queuebut.Name = "Queuebut";
-            this.Queuebut.Size = new System.Drawing.Size(75, 24);
+            this.Queuebut.Size = new System.Drawing.Size(100, 28);
             this.Queuebut.TabIndex = 11;
             this.Queuebut.Text = "Queue";
             this.Queuebut.UseVisualStyleBackColor = false;
@@ -173,21 +183,21 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.Controls.Add(this.accountBut);
             this.panel1.Controls.Add(this.logOutBut);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 60);
+            this.panel1.Size = new System.Drawing.Size(727, 74);
             this.panel1.TabIndex = 12;
             // 
             // accountBut
             // 
-            this.accountBut.Location = new System.Drawing.Point(673, 11);
-            this.accountBut.Margin = new System.Windows.Forms.Padding(2);
+            this.accountBut.Location = new System.Drawing.Point(628, 13);
             this.accountBut.Name = "accountBut";
-            this.accountBut.Size = new System.Drawing.Size(56, 26);
+            this.accountBut.Size = new System.Drawing.Size(75, 32);
             this.accountBut.TabIndex = 1;
             this.accountBut.Text = "Account";
             this.accountBut.UseVisualStyleBackColor = true;
@@ -195,10 +205,9 @@
             // 
             // logOutBut
             // 
-            this.logOutBut.Location = new System.Drawing.Point(733, 11);
-            this.logOutBut.Margin = new System.Windows.Forms.Padding(2);
+            this.logOutBut.Location = new System.Drawing.Point(13, 13);
             this.logOutBut.Name = "logOutBut";
-            this.logOutBut.Size = new System.Drawing.Size(56, 26);
+            this.logOutBut.Size = new System.Drawing.Size(75, 32);
             this.logOutBut.TabIndex = 0;
             this.logOutBut.Text = "Log Out";
             this.logOutBut.UseVisualStyleBackColor = true;
@@ -229,23 +238,19 @@
             // 
             // favoriteBut
             // 
-            this.favoriteBut.BackColor = System.Drawing.Color.Red;
-            this.favoriteBut.ForeColor = System.Drawing.SystemColors.Control;
-            this.favoriteBut.Location = new System.Drawing.Point(558, 116);
-            this.favoriteBut.Margin = new System.Windows.Forms.Padding(2);
+            this.favoriteBut.Location = new System.Drawing.Point(628, 129);
             this.favoriteBut.Name = "favoriteBut";
-            this.favoriteBut.Size = new System.Drawing.Size(71, 24);
+            this.favoriteBut.Size = new System.Drawing.Size(75, 23);
             this.favoriteBut.TabIndex = 13;
             this.favoriteBut.Text = "Favorite";
-            this.favoriteBut.UseVisualStyleBackColor = false;
+            this.favoriteBut.UseVisualStyleBackColor = true;
             this.favoriteBut.Click += new System.EventHandler(this.favoriteBut_Click);
             // 
             // checkBut
             // 
-            this.checkBut.Location = new System.Drawing.Point(558, 88);
-            this.checkBut.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBut.Location = new System.Drawing.Point(628, 91);
             this.checkBut.Name = "checkBut";
-            this.checkBut.Size = new System.Drawing.Size(71, 22);
+            this.checkBut.Size = new System.Drawing.Size(75, 23);
             this.checkBut.TabIndex = 14;
             this.checkBut.Text = "Check";
             this.checkBut.UseVisualStyleBackColor = true;
@@ -265,19 +270,18 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.businessDataGridView.DataSource = this.businessBindingSource1;
-            this.businessDataGridView.Location = new System.Drawing.Point(141, 144);
-            this.businessDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.businessDataGridView.Location = new System.Drawing.Point(16, 152);
             this.businessDataGridView.Name = "businessDataGridView";
             this.businessDataGridView.ReadOnly = true;
             this.businessDataGridView.RowTemplate.Height = 24;
             this.businessDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.businessDataGridView.Size = new System.Drawing.Size(519, 295);
+            this.businessDataGridView.Size = new System.Drawing.Size(687, 390);
             this.businessDataGridView.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "BusName";
-            this.dataGridViewTextBoxColumn7.HeaderText = "BusName";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Name";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
@@ -292,37 +296,37 @@
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "BusType";
-            this.dataGridViewTextBoxColumn6.HeaderText = "BusType";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Type";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "email";
-            this.dataGridViewTextBoxColumn3.HeaderText = "email";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Email";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "openHour";
-            this.dataGridViewTextBoxColumn4.HeaderText = "openHour";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Open";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "closeHour";
-            this.dataGridViewTextBoxColumn5.HeaderText = "closeHour";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Close";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // Search
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(727, 554);
             this.Controls.Add(this.businessDataGridView);
             this.Controls.Add(this.checkBut);
             this.Controls.Add(this.favoriteBut);
@@ -337,17 +341,17 @@
             this.Controls.Add(this.Searchbutton);
             this.Controls.Add(this.SearchtextBox);
             this.Controls.Add(this.FiltercomboBox);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Search";
             this.Text = "Search";
             this.Load += new System.EventHandler(this.Search_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userbaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.businessDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -371,13 +375,13 @@
         private System.Windows.Forms.Button favoriteBut;
         private System.Windows.Forms.Button checkBut;
         private System.Windows.Forms.DataGridView businessDataGridView;
+        private System.Windows.Forms.Button logOutBut;
+        private System.Windows.Forms.Button accountBut;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Here;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.Button logOutBut;
-        private System.Windows.Forms.Button accountBut;
     }
 }
